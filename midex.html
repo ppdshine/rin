@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>메종 플라티네 — 순백의 플래티넘, 시대를 넘는 완벽함</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Playfair+Display:wght@400;500&family=Noto+Serif+KR:wght@400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--bg:#0F172A;--bg2:#18181B;--card:#151b2e;--ink:#F1F5F9;--mute:#94A3B8;--line:rgba(203,213,225,.22);--plat:linear-gradient(135deg,#94A3B8 0%,#F8FAFC 35%,#CBD5E1 55%,#E5E4E2 75%,#94A3B8 100%);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#FAFAFA;--bg2:#EEF0F3;--card:#fff;--ink:#18181B;--mute:#475569;--line:rgba(71,85,105,.28)}}
+:root[data-theme="light"]{--bg:#FAFAFA;--bg2:#EEF0F3;--card:#fff;--ink:#18181B;--mute:#475569;--line:rgba(71,85,105,.28)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Sans KR',system-ui,sans-serif;font-weight:300;margin:0;word-break:keep-all}
+.serif{font-family:'Playfair Display','Noto Serif KR',Georgia,serif;font-weight:400}
+.cinzel{font-family:'Cinzel',Georgia,serif;letter-spacing:.18em}
+.plat-text{background:var(--plat);-webkit-background-clip:text;background-clip:text;color:transparent}
+.frame{border:1px solid transparent;background:linear-gradient(var(--card),var(--card)) padding-box,var(--plat) border-box}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.8rem;font-weight:500;font-size:.9rem;color:#0F172A;background:var(--plat);background-size:200% 200%;transition:background-position .6s,box-shadow .3s,transform .3s}
+.btn:hover{background-position:100% 100%;box-shadow:0 0 28px rgba(226,232,240,.35);transform:translateY(-1px)}
+.btn-o{color:var(--ink);background:none;border:1px solid var(--line);transition:border-color .3s,background .3s}
+.btn-o:hover{border-color:#CBD5E1;background:rgba(203,213,225,.08);box-shadow:none}
+.chip{padding:.5rem 1rem;border:1px solid var(--line);font-size:.85rem;color:var(--mute);transition:all .25s;cursor:pointer;background:none}
+.chip:hover{border-color:#CBD5E1;color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--plat);color:#0F172A;border-color:transparent;font-weight:500}
+.card .art{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card:hover .art{transform:scale(1.08)}
+.card .qa{transform:translateY(100%);transition:transform .35s}
+.card:hover .qa,.card:focus-within .qa{transform:none}
+@media (hover:none){.card .qa{transform:none}}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #CBD5E1;outline-offset:3px}
+.glint{position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.28) 50%,transparent 60%);transform:translateX(-120%);animation:glint 2.4s .6s ease-out 1 forwards;pointer-events:none}
+@keyframes glint{to{transform:translateX(120%)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="sticky top-0 z-40 backdrop-blur-md" style="background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)">
+  <div class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 lg:px-8">
+    <a href="#top" class="cinzel plat-text text-lg sm:text-xl font-semibold" aria-label="메종 플라티네 홈">MAISON PLATINE</a>
+    <nav class="hidden lg:flex gap-9 text-sm" aria-label="주 메뉴">
+      <a class="text-[color:var(--mute)] hover:text-[color:var(--ink)] transition" href="#collections">컬렉션</a>
+      <a class="text-[color:var(--mute)] hover:text-[color:var(--ink)] transition" href="#story">플래티넘 스토리</a>
+      <a class="text-[color:var(--mute)] hover:text-[color:var(--ink)] transition" href="#gifts">기프트 파인더</a>
+      <a class="text-[color:var(--mute)] hover:text-[color:var(--ink)] transition" href="#boutiques">부티크</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <button aria-label="검색" class="hover:opacity-70 transition"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <button aria-label="위시리스트" class="hover:opacity-70 transition"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button>
+      <button aria-label="장바구니" class="relative hover:opacity-70 transition"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2"/></svg><span id="cartN" class="absolute -right-2 -top-2 grid h-4 min-w-4 place-items-center rounded-full px-1 text-[10px] font-medium text-slate-900" style="background:var(--plat)">0</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="relative overflow-hidden" style="background:radial-gradient(ellipse at 70% 40%,rgba(203,213,225,.16),transparent 60%),var(--bg2)">
+  <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:px-8 lg:py-28">
+    <div>
+      <h1 class="serif plat-text text-[2.3rem] leading-[1.25] sm:text-5xl lg:text-6xl">순백의 플래티넘,<br>시대를 넘는 완벽함</h1>
+      <p class="mt-6 max-w-md text-base leading-relaxed sm:text-lg" style="color:var(--mute)">가장 희귀하고 순수한 귀금속, 950 플래티넘을 장인이 손으로 마감했습니다. 평생 곁에 두고, 다음 세대에 물려줄 수 있도록 만들었습니다.</p>
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="#collections" class="btn">컬렉션 보기</a>
+        <a href="#gifts" class="btn btn-o">선물 찾기</a>
+      </div>
+    </div>
+    <div class="relative mx-auto aspect-square w-full max-w-md overflow-hidden" aria-hidden="true">
+      <svg viewBox="0 0 400 400" class="h-full w-full">
+        <defs>
+          <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#64748B"/><stop offset=".3" stop-color="#F8FAFC"/><stop offset=".55" stop-color="#94A3B8"/><stop offset=".8" stop-color="#E5E4E2"/><stop offset="1" stop-color="#64748B"/></linearGradient>
+          <radialGradient id="hd" cx=".4" cy=".3"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#94A3B8"/></radialGradient>
+        </defs>
+        <ellipse cx="200" cy="250" rx="130" ry="120" fill="none" stroke="url(#hg)" stroke-width="22"/>
+        <ellipse cx="200" cy="250" rx="112" ry="102" fill="none" stroke="rgba(15,23,42,.35)" stroke-width="2"/>
+        <path d="M200 70l42 40-42 56-42-56z" fill="url(#hd)" stroke="#E2E8F0" stroke-width="2"/>
+        <path d="M158 110h84M200 70v96M180 90l20 20 20-20" stroke="#fff" stroke-opacity=".6" fill="none"/>
+        <g stroke="#fff" stroke-width="1.5" opacity=".8"><path d="M300 90v24M288 102h24"/><path d="M96 160v16M88 168h16"/></g>
+      </svg>
+      <div class="glint"></div>
+    </div>
+  </div>
+</section>
+
+<section id="collections" class="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+  <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
+    <h2 class="serif text-3xl sm:text-4xl">플래티넘 컬렉션</h2>
+    <div id="catTabs" class="flex flex-wrap gap-2" role="group" aria-label="카테고리 필터"></div>
+  </div>
+  <div id="grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+</section>
+
+<section id="story" style="background:var(--bg2)">
+  <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 lg:grid-cols-2 lg:px-8">
+    <div class="frame relative aspect-[4/5] max-w-md overflow-hidden lg:mx-0 mx-auto w-full" aria-hidden="true" style="background:radial-gradient(circle at 50% 35%,#334155,#0F172A 70%)">
+      <svg viewBox="0 0 300 375" class="h-full w-full"><defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#94A3B8"/><stop offset=".45" stop-color="#fff"/><stop offset="1" stop-color="#94A3B8"/></linearGradient></defs>
+        <path d="M60 300l90-190 90 190z" fill="none" stroke="url(#sg)" stroke-width="3"/><path d="M105 300l45-95 45 95z" fill="url(#sg)" opacity=".85"/><circle cx="150" cy="95" r="10" fill="#fff"/></svg>
+    </div>
+    <div>
+      <h2 class="serif text-3xl leading-snug sm:text-4xl">1년에 서른 점, 한 사람의 손에서 완성됩니다</h2>
+      <p class="mt-6 max-w-lg leading-relaxed" style="color:var(--mute)">1962년부터 파리 아틀리에는 오직 플래티넘만 다뤄 왔습니다. 금보다 서른 배 희귀하고 본래 색이 하얘서, 로듐 도금이 필요 없고 시간이 지나도 바래지 않습니다.</p>
+      <p class="mt-4 max-w-lg leading-relaxed" style="color:var(--mute)">모든 작품은 950 플래티넘으로 주조하고, 손으로 스톤을 세팅한 뒤 최대 40시간 동안 광을 냅니다. 여러 세대 동안 스톤을 지켜 낼 세팅, 그것이 우리의 기준입니다.</p>
+      <dl class="mt-10 grid max-w-lg grid-cols-3 gap-6 text-center" style="border-top:1px solid var(--line);padding-top:1.5rem">
+        <div><dt class="serif plat-text text-3xl">95%</dt><dd class="mt-1 text-xs" style="color:var(--mute)">플래티넘 순도</dd></div>
+        <div><dt class="serif plat-text text-3xl">40시간</dt><dd class="mt-1 text-xs" style="color:var(--mute)">수작업 폴리싱</dd></div>
+        <div><dt class="serif plat-text text-3xl">1962</dt><dd class="mt-1 text-xs" style="color:var(--mute)">아틀리에 설립</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="gifts" class="mx-auto max-w-5xl px-5 py-20 lg:px-8">
+  <div class="text-center">
+    <h2 class="serif text-3xl sm:text-4xl">나에게 꼭 맞는 플래티넘 선물 찾기</h2>
+    <p class="mx-auto mt-4 max-w-md" style="color:var(--mute)">받는 분, 예산, 기념일을 골라 보세요. 선택할 때마다 결과가 바로 바뀝니다.</p>
+  </div>
+  <div class="frame mt-10 grid gap-8 p-6 sm:p-10 md:grid-cols-3" id="filters"></div>
+  <p id="giftCount" class="mt-8 text-sm" style="color:var(--mute)" aria-live="polite"></p>
+  <div id="giftOut" class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+</section>
+
+<section style="background:var(--bg2)">
+  <div class="mx-auto grid max-w-7xl gap-px px-5 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:px-8" id="benefits"></div>
+</section>
+
+<section id="boutiques" class="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+  <h2 class="serif text-3xl sm:text-4xl">부티크 방문하기</h2>
+  <div class="mt-8 grid gap-6 sm:grid-cols-3">
+    <div class="frame p-6"><h3 class="serif text-xl">파리</h3><p class="mt-2 text-sm" style="color:var(--mute)">방돔 광장 12번지<br>월–토 10:00–19:00</p></div>
+    <div class="frame p-6"><h3 class="serif text-xl">서울</h3><p class="mt-2 text-sm" style="color:var(--mute)">강남구 청담동<br>매일 11:00–20:00</p></div>
+    <div class="frame p-6"><h3 class="serif text-xl">홍콩</h3><p class="mt-2 text-sm" style="color:var(--mute)">센트럴 랜드마크<br>매일 11:00–20:00</p></div>
+  </div>
+</section>
+</main>
+
+<footer style="background:var(--bg2);border-top:1px solid var(--line)">
+  <div class="mx-auto grid max-w-7xl gap-12 px-5 py-16 lg:grid-cols-3 lg:px-8">
+    <div>
+      <h2 class="serif plat-text text-2xl">플래티넘 서클 가입</h2>
+      <p class="mt-3 text-sm" style="color:var(--mute)">신규 컬렉션 선공개와 프라이빗 상담 예약 소식을 받아보세요.</p>
+      <div class="mt-5 flex max-w-sm">
+        <label for="em" class="sr-only">이메일 주소</label>
+        <input id="em" type="email" placeholder="이메일 주소" class="min-w-0 flex-1 border bg-transparent px-4 py-3 text-sm placeholder:text-slate-500" style="border-color:var(--line);color:var(--ink)">
+        <button id="join" class="btn !px-5">가입</button>
+      </div>
+      <p id="joinMsg" class="mt-3 text-sm" style="color:var(--mute)" aria-live="polite"></p>
+    </div>
+    <div class="grid grid-cols-2 gap-8 text-sm lg:col-span-2" style="color:var(--mute)">
+      <div><h3 class="mb-3 font-medium" style="color:var(--ink)">고객 센터</h3><ul class="space-y-2"><li><a class="hover:text-slate-200" href="#">문의하기</a></li><li><a class="hover:text-slate-200" href="#">배송 및 반품</a></li><li><a class="hover:text-slate-200" href="#">반지 사이즈 안내</a></li><li><a class="hover:text-slate-200" href="#">관리 및 수선</a></li></ul></div>
+      <div><h3 class="mb-3 font-medium" style="color:var(--ink)">매장 및 소셜</h3><ul class="space-y-2"><li><a class="hover:text-slate-200" href="#boutiques">매장 찾기</a></li><li><a class="hover:text-slate-200" href="#">인스타그램</a></li><li><a class="hover:text-slate-200" href="#">핀터레스트</a></li><li><a class="hover:text-slate-200" href="#">유튜브</a></li></ul></div>
+    </div>
+  </div>
+  <p class="px-5 pb-8 text-center text-xs" style="color:var(--mute)">© 2026 메종 플라티네. All rights reserved.</p>
+</footer>
+
+<script>
+const P=[
+ {n:'에투알 솔리테어 링',c:'Rings',p:6900000,f:['partner','self'],o:['anniversary','engagement','milestone']},
+ {n:'뤼미에르 밴드',c:'Rings',p:2700000,f:['partner','self','friend'],o:['anniversary','milestone','birthday']},
+ {n:'오로르 펜던트',c:'Necklaces',p:3800000,f:['partner','mother','friend'],o:['birthday','anniversary','milestone']},
+ {n:'페를 체인',c:'Necklaces',p:1400000,f:['mother','friend','self'],o:['birthday','graduation']},
+ {n:'오르비트 브레이슬릿',c:'Accessories',p:4600000,f:['partner','mother','self'],o:['milestone','birthday','anniversary']},
+ {n:'실라주 커프링크스',c:'Accessories',p:1100000,f:['partner','friend','self'],o:['graduation','birthday','milestone']}
+];
+const CL={All:'전체',Rings:'반지',Necklaces:'목걸이',Accessories:'액세서리'};
+const fmt=n=>'₩'+n.toLocaleString('ko-KR');
+function art(c){
+ const g='<defs><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#64748B"/><stop offset=".35" stop-color="#F8FAFC"/><stop offset=".7" stop-color="#94A3B8"/><stop offset="1" stop-color="#E5E4E2"/></linearGradient></defs>';
+ const s={Rings:'<ellipse cx="100" cy="125" rx="46" ry="42" fill="none" stroke="url(#a)" stroke-width="9"/><path d="M100 52l16 15-16 20-16-20z" fill="#fff" stroke="url(#a)" stroke-width="2"/>',
+ Necklaces:'<path d="M35 55q65 120 130 0" fill="none" stroke="url(#a)" stroke-width="3"/><circle cx="100" cy="128" r="14" fill="url(#a)"/><path d="M100 108l8 8-8 10-8-10z" fill="#fff"/>',
+ Accessories:'<circle cx="100" cy="100" r="52" fill="none" stroke="url(#a)" stroke-width="10"/><circle cx="100" cy="100" r="52" fill="none" stroke="#0F172A" stroke-opacity=".25" stroke-dasharray="2 12"/>'};
+ return '<svg viewBox="0 0 200 200" class="art h-full w-full" aria-hidden="true">'+g+s[c]+'</svg>';
+}
+let cart=0;const cartN=document.getElementById('cartN');
+function card(x){return `<article class="card frame overflow-hidden"><div class="relative aspect-square overflow-hidden" style="background:radial-gradient(circle at 50% 40%,#334155,#0F172A 75%)">${art(x.c)}<button data-add class="qa btn absolute inset-x-0 bottom-0 !py-3">바로 담기</button></div><div class="flex items-baseline justify-between gap-3 p-5"><div><h3 class="serif text-lg">${x.n}</h3><p class="text-xs" style="color:var(--mute)">${CL[x.c]}</p></div><p class="plat-text font-medium">${fmt(x.p)}</p></div></article>`}
+const cats=['All','Rings','Necklaces','Accessories'];let cat='All';
+const grid=document.getElementById('grid'),tabs=document.getElementById('catTabs');
+function drawGrid(){grid.innerHTML=P.filter(x=>cat==='All'||x.c===cat).map(card).join('');
+ tabs.innerHTML=cats.map(c=>`<button class="chip" aria-pressed="${c===cat}" data-cat="${c}">${CL[c]}</button>`).join('');}
+tabs.addEventListener('click',e=>{const b=e.target.closest('[data-cat]');if(b){cat=b.dataset.cat;drawGrid()}});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-add]');if(b){cart++;cartN.textContent=cart;b.textContent='담았습니다';setTimeout(()=>b.textContent='바로 담기',1200)}});
+drawGrid();
+
+const F={who:[['partner','연인·배우자'],['mother','어머니'],['friend','친구'],['self','나 자신']],budget:[['0','200만원 미만'],['1','200만~400만원'],['2','400만원 초과']],occ:[['birthday','생일'],['anniversary','기념일'],['engagement','프러포즈'],['graduation','졸업'],['milestone','승진·성취']]};
+const L={who:'누구에게 드리나요?',budget:'예산',occ:'어떤 날인가요?'};
+const sel={who:null,budget:null,occ:null};
+const fEl=document.getElementById('filters');
+fEl.innerHTML=Object.keys(F).map(k=>`<fieldset><legend class="serif mb-4 text-lg">${L[k]}</legend><div class="flex flex-wrap gap-2">${F[k].map(([v,t])=>`<button class="chip" aria-pressed="false" data-k="${k}" data-v="${v}">${t}</button>`).join('')}</div></fieldset>`).join('');
+fEl.addEventListener('click',e=>{const b=e.target.closest('[data-k]');if(!b)return;const k=b.dataset.k,v=b.dataset.v;sel[k]=sel[k]===v?null:v;
+ fEl.querySelectorAll(`[data-k="${k}"]`).forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.v===sel[k])));drawGifts()});
+function band(p){return p<2000000?'0':p<=4000000?'1':'2'}
+function drawGifts(){
+ const r=P.filter(x=>(!sel.who||x.f.includes(sel.who))&&(sel.budget===null||band(x.p)===sel.budget)&&(!sel.occ||x.o.includes(sel.occ)));
+ document.getElementById('giftCount').textContent=r.length?`선택하신 조건에 맞는 상품 ${r.length}개`:'세 가지 조건에 모두 맞는 상품이 없습니다. 조건 하나를 해제해 보세요.';
+ document.getElementById('giftOut').innerHTML=r.map(card).join('');}
+drawGifts();
+
+const B=[['빠른 배송','보험 가입 택배로 2일 이내, 수령 시 서명 확인.','M3 7h11v9H3zM14 10h4l3 3v3h-7'],['맞춤 각인','최대 20자, 장인이 직접 레이저 각인하고 검수합니다.','M4 20l4-1 11-11-3-3L5 16zM14 6l3 3'],['정품 보증','모든 제품에 Pt950 각인과 보증서가 함께합니다.','M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6zM8.5 12l2.5 2.5 4.5-5'],['시그니처 패키지','래커 케이스와 천 안감 박스에 담아, 바로 선물할 수 있습니다.','M4 9h16v11H4zM2 6h20v3H2zM12 6v14']];
+document.getElementById('benefits').innerHTML=B.map(b=>`<div class="p-6 text-center sm:text-left"><svg class="mx-auto sm:mx-0" width="28" height="28" fill="none" stroke="#CBD5E1" stroke-width="1.3" viewBox="0 0 24 24"><path d="${b[2]}"/></svg><h3 class="serif mt-4 text-lg">${b[0]}</h3><p class="mt-2 text-sm leading-relaxed" style="color:var(--mute)">${b[1]}</p></div>`).join('');
+
+document.getElementById('join').addEventListener('click',()=>{const v=document.getElementById('em').value.trim(),m=document.getElementById('joinMsg');m.textContent=/^\S+@\S+\.\S+$/.test(v)?'플래티넘 서클에 오신 것을 환영합니다.':'올바른 이메일 주소를 입력해 주세요. 예: name@example.com'});
+</script>
+</body>
+</html>
