@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PIUM 피움 · 플래티넘 주얼리</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--bg2:#f4f4f6;--ink:#1c1c20;--mute:#6d6d76;--line:#e3e3e8;--accent:#8a93a6;--hd:rgba(255,255,255,.94);color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121215;--bg2:#1b1b20;--ink:#ececf0;--mute:#9c9ca6;--line:#2c2c33;--accent:#aab2c6;--hd:rgba(18,18,21,.94);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121215;--bg2:#1b1b20;--ink:#ececf0;--mute:#9c9ca6;--line:#2c2c33;--accent:#aab2c6;--hd:rgba(18,18,21,.94);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",system-ui,sans-serif;font-weight:300;line-height:1.7}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hd);z-index:30}
+a{color:inherit;text-decoration:none}
+.serif{font-family:"Noto Serif KR",Georgia,serif}
+.top{background:var(--ink);color:var(--bg);text-align:center;font-size:12px;letter-spacing:.08em;padding:8px 12px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--hd);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.logo{font-family:"Noto Serif KR",serif;font-size:26px;letter-spacing:.38em;font-weight:300}
+.logo small{display:block;font-size:10px;letter-spacing:.3em;color:var(--mute);text-align:center;margin-top:-2px}
+.util{display:flex;gap:18px;font-size:12px;letter-spacing:.1em;color:var(--mute)}
+nav{border-top:1px solid var(--line)}
+nav ul{max-width:1200px;margin:auto;display:flex;justify-content:center;gap:34px;list-style:none;padding:12px 20px;font-size:13px;letter-spacing:.14em;flex-wrap:wrap}
+nav a:hover{color:var(--accent)}
+.burger{display:none;background:none;border:0;color:var(--ink);font-size:22px;cursor:pointer}
+.hero{position:relative;height:min(78vh,640px);overflow:hidden}
+.slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;opacity:0;transition:opacity 1s;padding:24px}
+.slide.on{opacity:1}
+.s1{background:radial-gradient(circle at 70% 30%,#e9ecf4,#b9c0d1 55%,#7f879a)}
+.s2{background:radial-gradient(circle at 30% 40%,#f3efe9,#d6cdc0 55%,#968b7a)}
+.s3{background:radial-gradient(circle at 60% 60%,#dfe6ee,#9fb0c6 55%,#5f7089)}
+.slide div{color:#1c1c20;max-width:560px}
+.slide h2{font-family:"Noto Serif KR",serif;font-weight:300;font-size:clamp(28px,5vw,52px);letter-spacing:.12em;line-height:1.35}
+.slide p{margin:16px 0 28px;font-size:15px;letter-spacing:.06em}
+.btn{display:inline-block;border:1px solid currentColor;padding:12px 34px;font-size:12px;letter-spacing:.22em;transition:.3s}
+.btn:hover{background:#1c1c20;color:#fff;border-color:#1c1c20}
+.gem-bg{position:absolute;width:300px;height:300px;opacity:.18;right:8%;top:12%}
+.dots{position:absolute;bottom:20px;left:0;right:0;display:flex;justify-content:center;gap:10px}
+.dots button{width:28px;height:2px;border:0;background:rgba(28,28,32,.3);cursor:pointer}
+.dots button.on{background:#1c1c20}
+section{max-width:1200px;margin:auto;padding:84px 20px}
+.h{text-align:center;margin-bottom:44px}
+.h span{font-size:11px;letter-spacing:.35em;color:var(--accent)}
+.h h3{font-family:"Noto Serif KR",serif;font-weight:300;font-size:28px;letter-spacing:.1em;margin-top:6px}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat{aspect-ratio:3/4;display:flex;align-items:flex-end;padding:20px;background:linear-gradient(160deg,var(--bg2),var(--line));position:relative;overflow:hidden}
+.cat svg{position:absolute;width:55%;left:22%;top:18%;color:var(--accent);opacity:.7;transition:.5s}
+.cat:hover svg{transform:scale(1.1) rotate(4deg)}
+.cat b{font-family:"Noto Serif KR",serif;font-weight:400;letter-spacing:.14em;position:relative}
+.cat em{display:block;font-style:normal;font-size:11px;color:var(--mute);letter-spacing:.16em;position:relative}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 18px}
+.card .img{aspect-ratio:1;background:var(--bg2);display:flex;align-items:center;justify-content:center;position:relative}
+.card .img svg{width:46%;color:var(--accent)}
+.tag{position:absolute;top:10px;left:10px;font-size:10px;letter-spacing:.14em;background:var(--ink);color:var(--bg);padding:2px 8px}
+.card h4{font-weight:400;font-size:14px;margin-top:12px}
+.card p{font-size:12px;color:var(--mute)}
+.card .pr{font-size:14px;margin-top:4px;font-weight:500}
+.story{background:var(--bg2);max-width:none;padding:0}
+.story .in{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:84px 20px}
+.story .vis{aspect-ratio:1;background:radial-gradient(circle,#e9ecf4,#8f98ab);display:flex;align-items:center;justify-content:center}
+.story .vis svg{width:50%;color:#fff;opacity:.85}
+.story h3{font-family:"Noto Serif KR",serif;font-weight:300;font-size:30px;letter-spacing:.08em;line-height:1.5;margin:8px 0 18px}
+.story p{color:var(--mute);margin-bottom:26px}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.trust div{border-top:1px solid var(--line);padding-top:20px}
+.trust b{display:block;font-family:"Noto Serif KR",serif;font-size:30px;font-weight:300}
+.trust span{font-size:12px;color:var(--mute);letter-spacing:.08em}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev div{border:1px solid var(--line);padding:26px}
+.rev .st{color:var(--accent);letter-spacing:.2em;font-size:13px}
+.rev p{margin:10px 0;font-size:14px}
+.rev small{color:var(--mute)}
+.news{text-align:center;background:var(--ink);color:var(--bg);max-width:none}
+.news form{display:flex;justify-content:center;gap:8px;margin-top:22px;flex-wrap:wrap}
+.news input{padding:12px 16px;min-width:260px;border:1px solid #555;background:transparent;color:inherit;font:inherit}
+.news button{padding:12px 28px;border:0;background:var(--bg);color:var(--ink);letter-spacing:.2em;font-size:12px;cursor:pointer}
+footer{border-top:1px solid var(--line);font-size:12px;color:var(--mute)}
+.ft{max-width:1200px;margin:auto;padding:44px 20px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.ft b{color:var(--ink);letter-spacing:.14em;display:block;margin-bottom:10px;font-weight:500}
+.ft li{list-style:none}
+.cp{text-align:center;padding:16px;border-top:1px solid var(--line)}
+@media(max-width:860px){
+.cats,.grid{grid-template-columns:repeat(2,1fr)}
+.story .in,.rev,.ft{grid-template-columns:1fr}
+.trust{grid-template-columns:repeat(2,1fr)}
+.burger{display:block}.util{display:none}
+nav{display:none}nav.open{display:block}
+nav ul{flex-direction:column;gap:12px;align-items:center}
+.logo{font-size:22px}
+section{padding:56px 16px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="gem" viewBox="0 0 100 100"><path d="M26 18h48l20 24-44 46L6 42z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M6 42h88M38 18l-8 24 20 46 20-46-8-24M30 42h40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol></svg>
+
+<div class="top">신규 회원 10% 쿠폰 · 3만원 이상 무료배송 · 플래티넘 PT950 정품 보증서 제공</div>
+<header>
+<div class="bar">
+<button class="burger" id="bg" aria-label="메뉴">☰</button>
+<a class="logo" href="#top">PIUM<small>피움 · PLATINUM</small></a>
+<div class="util"><a href="#">LOGIN</a><a href="#">MYPAGE</a><a href="#">CART (0)</a></div>
+</div>
+<nav id="nv"><ul>
+<li><a href="#story">ABOUT</a></li><li><a href="#best">NEW 10%</a></li><li><a href="#cats">HIGH JEWELRY</a></li><li><a href="#cats">JEWELRY</a></li><li><a href="#cats">COLLECTIONS</a></li><li><a href="#cats">CLEANING KIT</a></li><li><a href="#review">COMMUNITY</a></li><li><a href="#sns">SPONSORSHIP</a></li>
+</ul></nav>
+</header>
+
+<div class="hero" id="top">
+<div class="slide s1 on"><svg class="gem-bg"><use href="#gem"/></svg><div><h2>피어나는 빛,<br>영원한 플래티넘</h2><p>순도 95% PT950, 변색 없이 오래 빛나는 데일리 주얼리</p><a class="btn" href="#best">SHOP NOW</a></div></div>
+<div class="slide s2"><svg class="gem-bg"><use href="#gem"/></svg><div><h2>첫 번째 컬렉션<br>PIUM Signature</h2><p>매일 착용해도 편안한 세련된 라인</p><a class="btn" href="#cats">VIEW COLLECTION</a></div></div>
+<div class="slide s3"><svg class="gem-bg"><use href="#gem"/></svg><div><h2>소중한 순간을<br>플래티넘으로</h2><p>예물 · 기념일 · 나를 위한 선물</p><a class="btn" href="#story">OUR STORY</a></div></div>
+<div class="dots"><button class="on"></button><button></button><button></button></div>
+</div>
+
+<section id="cats">
+<div class="h"><span>CATEGORY</span><h3>카테고리</h3></div>
+<div class="cats">
+<a class="cat" href="#"><svg><use href="#gem"/></svg><div><b>RING</b><em>반지</em></div></a>
+<a class="cat" href="#"><svg><use href="#gem"/></svg><div><b>NECKLACE</b><em>목걸이</em></div></a>
+<a class="cat" href="#"><svg><use href="#gem"/></svg><div><b>EARRING</b><em>귀걸이</em></div></a>
+<a class="cat" href="#"><svg><use href="#gem"/></svg><div><b>BRACELET</b><em>팔찌</em></div></a>
+</div>
+</section>
+
+<section id="best" style="padding-top:0">
+<div class="h"><span>BEST &amp; NEW</span><h3>베스트 상품</h3></div>
+<div class="grid">
+<a class="card" href="#"><div class="img"><span class="tag">NEW</span><svg><use href="#gem"/></svg></div><h4>피움 솔리테어 링</h4><p>PT950 · 0.3ct</p><div class="pr">₩000,000</div></a>
+<a class="card" href="#"><div class="img"><span class="tag">BEST</span><svg><use href="#gem"/></svg></div><h4>클래식 라인 목걸이</h4><p>PT950 · 체인 40cm</p><div class="pr">₩000,000</div></a>
+<a class="card" href="#"><div class="img"><svg><use href="#gem"/></svg></div><h4>스터드 귀걸이</h4><p>PT950 · 0.2ct</p><div class="pr">₩000,000</div></a>
+<a class="card" href="#"><div class="img"><span class="tag">NEW</span><svg><use href="#gem"/></svg></div><h4>테니스 팔찌</h4><p>PT950 · 17cm</p><div class="pr">₩000,000</div></a>
+<a class="card" href="#"><div class="img"><svg><use href="#gem"/></svg></div><h4>페어 커플링</h4><p>PT950 · 2개 1세트</p><div class="pr">₩000,000</div></a>
+<a class="card" href="#"><div class="img"><span class="tag">BEST</span><svg><use href="#gem"/></svg></div><h4>미니 펜던트</h4><p>PT950 · 0.1ct</p><div class="pr">₩000,000</div></a>
+<a class="card" href="#"><div class="img"><svg><use href="#gem"/></svg></div><h4>웨이브 밴드 링</h4><p>PT950</p><div class="pr">₩000,000</div></a>
+<a class="card" href="#"><div class="img"><svg><use href="#gem"/></svg></div><h4>주얼리 클리닝 키트</h4><p>세척액 · 클리닝 천</p><div class="pr">₩00,000</div></a>
+</div>
+</section>
+
+<div class="story" id="story"><div class="in">
+<div class="vis"><svg><use href="#gem"/></svg></div>
+<div><span style="font-size:11px;letter-spacing:.35em;color:var(--accent)">ABOUT PIUM</span>
+<h3>한 번 피어나<br>평생 빛나는 주얼리</h3>
+<p>피움(PIUM)은 ‘피어나다’에서 시작된 플래티넘 주얼리 브랜드입니다. 변색과 알레르기 걱정이 적은 플래티넘의 가치를, 일상에서 부담 없이 누릴 수 있도록 정직한 소재와 섬세한 디자인으로 만듭니다.</p>
+<a class="btn" href="#">브랜드 스토리</a></div>
+</div></div>
+
+<section>
+<div class="trust">
+<div><b>PT950</b><span>순도 보증</span></div>
+<div><b>1:1</b><span>정품 보증서</span></div>
+<div><b>평생</b><span>무상 클리닝</span></div>
+<div><b>7일</b><span>교환 · 환불</span></div>
+</div>
+</section>
+
+<section id="review" style="padding-top:0">
+<div class="h"><span>REVIEW</span><h3>고객 후기</h3></div>
+<div class="rev">
+<div><div class="st">★★★★★</div><p>착용감이 가볍고 은은하게 빛나서 매일 하고 다녀요.</p><small>sample***</small></div>
+<div><div class="st">★★★★★</div><p>보증서와 포장이 꼼꼼해서 선물용으로 좋았습니다.</p><small>sample***</small></div>
+<div><div class="st">★★★★★</div><p>사이즈 교환도 빠르게 처리해 주셨어요.</p><small>sample***</small></div>
+</div>
+</section>
+
+<section class="news" id="sns">
+<div class="h" style="margin:0"><span style="color:#aab2c6">NEWSLETTER</span><h3>신상품 · 이벤트 소식</h3></div>
+<form onsubmit="event.preventDefault();this.querySelector('button').textContent='감사합니다'"><input type="email" placeholder="이메일 주소" aria-label="이메일"><button>SUBSCRIBE</button></form>
+<p style="margin-top:22px;font-size:12px;letter-spacing:.2em;color:#aab2c6">INSTAGRAM · KAKAOTALK · YOUTUBE · BLOG</p>
+</section>
+
+<footer>
+<div class="ft">
+<div><b>PIUM 피움</b>COMPANY: (회사명) · OWNER: (대표자)<br>ADDRESS: (사업장 주소)<br>BUSINESS NUMBER: 000-00-00000<br>MAIL-ORDER LICENSE: (통신판매업 신고번호)</div>
+<ul><b>CUSTOMER</b><li>TERMS OF USE</li><li>PRIVACY POLICY</li><li>SHOP GUIDE</li></ul>
+<ul><b>CONTACT</b><li>TEL: 00-0000-0000</li><li>E-MAIL: hello@example.com</li><li>평일 10:00–17:00</li></ul>
+</div>
+<div class="cp">Copyright © PIUM. All rights reserved.</div>
+</footer>
+
+<script>
+(function(){
+var s=document.querySelectorAll('.slide'),d=document.querySelectorAll('.dots button'),i=0,t;
+function go(n){s[i].classList.remove('on');d[i].classList.remove('on');i=(n+s.length)%s.length;s[i].classList.add('on');d[i].classList.add('on')}
+function run(){t=setInterval(function(){go(i+1)},5000)}
+d.forEach(function(b,n){b.addEventListener('click',function(){clearInterval(t);go(n);run()})});
+run();
+document.getElementById('bg').addEventListener('click',function(){document.getElementById('nv').classList.toggle('open')});
+})();
+</script>
+</body>
+</html>
+
